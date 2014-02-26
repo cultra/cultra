@@ -1,0 +1,30 @@
+////////////////////////
+// Mixins Partials
+//
+// All of your mixins should go in this file.
+////////////////////////
+
+// Builds a "local" grid from elements. This mixin goes on the elements that
+// wrap each grid item. It is assumed that the grid has already been configured
+// $breakpoint: A variable useable by the compass breakpoint extension. Must be
+// in the 2-number "min max" format unless this grid uses the final breakpoint.
+// $layout: The number of columns for this grid.
+// $divisions: The number of items in each grid row, for best results the
+// $layout / $divisions must be an integer value.
+@mixin grid-layout-divisions($breakspan, $layout, $divisions) {
+  @include breakpoint($breakspan) {
+    @include layout($layout) {
+      $division-cols: floor($layout / $divisions);
+
+      @include float-span($division-cols);
+
+      &:nth-of-type(#{$divisions}n) {
+        @include float-span($division-cols, 'last');
+      }
+
+      &:nth-of-type(#{$divisions}n + 1) {
+        clear: left;
+      }
+    }
+  }
+}

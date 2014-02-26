@@ -1,0 +1,28 @@
+////////////////////////
+// Design Partials
+//
+// Separate your Layout from Design
+// Build sub folders and partials in this folder, with everything being imported, in cascading order, into this file.
+//
+// All styling, non box model properties go here
+////////////////////////
+
+body {
+  background-color: black;
+  // @include background-grid;
+  width: 100%;
+  height: 100%;
+}
+
+#footer * {
+  color: $lilac;
+}
+
+#footer {
+  h3 {
+    font-family: "Reader Medium";
+  }
+  a {
+    font-family: "Reader Regular";
+  }
+}

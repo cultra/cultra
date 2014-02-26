@@ -1,0 +1,24 @@
+////////////////////////
+// Variables Partials
+//
+// All of your variables should go in this file.
+////////////////////////
+$breakPointNarrow: 720px;
+$breakPointNormal: 960px;
+$breakPointWide: 1200px;
+
+// Providing 2 numbers for break points sets a maximum and a minimum.
+$breakSpanMobile: 0px $breakPointNarrow;
+$breakSpanNarrow: $breakPointNarrow $breakPointNormal;
+$breakSpanNormal: $breakPointNormal $breakPointWide;
+
+$grids: 12;
+// $grids: add-grid(6 at $breakPointNarrow);
+// $grids: add-grid(9 at $breakPointNormal);
+// $grids: add-grid(12 at $breakPointWide);
+$gutters: 1/3;
+
+
+// Colors
+$lilac: #c2b3d0;
+$orange: #b55c4f;
